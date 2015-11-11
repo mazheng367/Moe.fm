@@ -1,0 +1,77 @@
+﻿em,i{font-style:normal}
+
+.clearboth{clear:both}
+
+.moefmPlayer{width:100%;height:auto;overflow-x:auto;position:relative;}
+.cover{width:160px;height:160px;z-index:99;}
+.album-container{float:left;margin-left:100px;z-index:2;position:relative}
+.player-header{background-color:#f6f6f6;width:1280px}
+.container-left{float: left;width:1000px}
+
+/*播放器描述*/
+.player-musicInfo{margin-left:40px;width:1000px}
+.player-musicInfo .title{font-size:2em;}
+.player-musicInfo .separator{font-size:20px;color:gray;margin-left:10px;margin-right:-10px}
+.player-musicInfo .artist{font-size:20px;color:gray;margin-left:10px;}
+.player-musicInfo .album {position:relative;top:2px;left:-2px;}
+.player-musicInfo .album img{width:16px;height:16px}
+.player-musicInfo .album em{
+	color:gray;position:relative;top:-2px;
+	overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+
+/*播放器控制器-进度条*/
+.control-panel{position:relative;margin-top:10px;width:100%;cursor:pointer;z-index:5}
+.progress-bar{height:10px;width:0px;background: url("/images-customer/bg_bar.png") repeat-x scroll left center transparent}
+.control-item{
+	background-color: #F6F6F6;height:82px;
+	position:absolute;left:0;right:0;
+}
+
+.progress-buffer{
+	position:absolute;height:10px;background-color:rgba(0, 0, 0, 0.5);z-index:-1
+}
+
+.item-container{
+	position:relative;left:300px;top:5px;float:left;width:1000px
+}
+.item-container div{cursor:pointer}
+.item-button{
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	float:left;
+	background-position:center;
+	margin-top:12px
+}
+.item-container .like{
+	background-image:url('/images-customer/media_notlike.png');
+	background-size:50px;
+	margin-top:11px
+}
+.item-container .liked{
+	background-image:url('/images-customer/media_like.png');
+	background-size:50px;margin-top:11px
+}
+.item-container .play{background-image:url('/images-customer/media_play.png');margin-left:50px}
+.item-container .pause{background-image:url('/images-customer/media_pause.png');margin-left:50px}
+.item-container .delete{ 
+    width: 49px;height: 50px;
+    background-image: url('/images-customer/download.png');
+    float: left;cursor: pointer;margin-left: 50px;margin-top: 16px;
+    background-position-x: -6px;
+}
+.item-container .next{background-image:url('/images-customer/media_next.png');margin-left:50px}
+.item-container .volume{background-image:url('');margin-top:13px;margin-left:50px;width:130px;}
+.item-container .volume img{float:left;position:relative;top:12px;}
+.item-container .volume .volume-panel{float:left;position:relative;width:100px;top:20px;left:6px}
+.item-container .volume div.max{position:absolute;width:100%;height:8px;background-color:#FFF}
+.item-container .volume div.bar{position:absolute;width:100%;height:8px;background-color:#000}
+.time-info{position:relative;float:right;right:100px}
+.time-info span {
+  color: #eaeaea;
+  font-size: 58px;
+  font-weight: bolder;
+}
+
+.title-artist-con{ overflow: hidden;white-space: nowrap;text-overflow: ellipsis}

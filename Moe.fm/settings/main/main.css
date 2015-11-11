@@ -1,0 +1,20 @@
+﻿.win-back {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.win-backbutton {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.win-backbutton:hover, .win-navigation-backbutton:hover .win-back {
+    background-color: #0C8EF6;
+    border-color: #FFFFFF;
+}
+#toggle1 .win-switch::-ms-fill-lower, 
+#toggle2 .win-switch::-ms-fill-lower,
+#toggle3 .win-switch::-ms-fill-lower
+{
+    background-color: #0C8EF6;
+}

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>items</title>
+
+    <!-- WinJS 参照 -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="items.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+
+    <script src="/Scripts/moefm.helper.js"></script>
+    <script src="/Scripts/moefm.consts.js"></script>
+    <script src="/Scripts/moefm.javascript.extensions.js"></script>
+    <script src="items.js"></script>
+</head>
+<body>
+    <div class="items fragment framepage">
+        <div class="search-con">
+            <div id="oNoData" class="moe-hidden">找不到专辑或歌曲~ (￣▽￣)</div>
+            <div id="lsvTemplate" data-win-control="WinJS.Binding.Template">
+                <div class="search-item">
+                    <img data-win-bind="src:wiki_cover.square;alt:wiki_title">
+                    <div class="title" data-win-bind="innerText:wiki_title;title:wiki_title"></div>
+					<div class="intro" data-win-bind="innerText:wiki_intro;title:wiki_intro"></div>
+                </div>
+            </div>
+            <div id="lsvWikis" data-win-control="WinJS.UI.ListView"
+                 data-win-options="{itemTemplate:select('#lsvTemplate'), selectionMode:'none'}"></div>
+        </div>
+        <progress id="pgLoadingBar" class="win-ring win-large load-progess"></progress>
+    	<div aria-label="App Settings Flyout" data-win-control="WinJS.UI.SettingsFlyout" data-win-options="{settingsCommandId:'settingFilter', width:'narrow'}">
+            <div class="win-header col_flyout_header" style="height: 58px;">
+                <button type="button" onclick="window.focus()" class="win-backbutton"></button>
+                <div class="win-label" style="color: white">筛选条件</div>
+                <img alt="smalllogo" style="position: absolute; right: 10px;top:0;width: 100px;height: 100px" src="/images-customer/myhomepage_fans_header.png">
+            </div>
+    		<div class="win-content">
+    			<div class="win-settings-section" style="height:100px; width: 283px;">
+    				<h3>按年份</h3>
+    			    <div id="yearFilter" style="padding:0;width:100%;margin-top:-5px">
+                        <div data-value="" class="item-selected">ALL</div>
+    			    </div> 
+    			</div>
+    			<div class="win-settings-section" style="height:100px">
+    				<h3>按月份</h3>
+    			    <div id="monthFilter" style="padding:0;width:100%;margin-top:-5px">
+                        <div data-value="" class="item-selected">ALL</div>
+    			    </div>
+    			</div>
+				<div class="win-settings-section">
+    				<h3>按首字母</h3>
+    				<div>
+    					<div id="alphaFilter" style="padding:0;width:100%;margin-top:-5px">
+                            <div data-value="" class="item-selected">ALL</div>
+						</div>
+					</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</body>
+</html>

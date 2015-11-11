@@ -1,0 +1,27 @@
+﻿#__moefm_au_con__ {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: grey;
+    opacity: 0.8;
+    z-index: 99;
+}
+#__moefm_main_page__ {
+    z-index: 200;
+    width: 500px;
+    height: 600px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+}
+#__moe_webview__{width:100%;height:107.5%;margin-top:-45px}
+
+#__moefm_main_page__ .ring_position{
+	position:relative;
+	top:50%;left:45%;
+}
+#__moefm_main_page__ .warning_msg{font-size:20px;font-weight:bold;text-align:center;margin-top:45%}
+.display-none{display: none;}

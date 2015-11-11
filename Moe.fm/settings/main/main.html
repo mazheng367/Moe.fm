@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>main</title>
+
+    <link href="main.css" rel="stylesheet" />
+    <script src="main.js"></script>
+    <script src="../../Scripts/moefm.helper.js"></script>
+</head>
+<body>
+    <div id="mainSettingsDiv" data-win-control="WinJS.UI.SettingsFlyout" aria-label="App defaults Settings flyout"
+         data-win-options="{settingsCommandId:'help',width:'narrow'}">
+        <div class="win-header" style="background-color:#0C8EF6">
+            <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton"></button>
+            <div class="win-label" style="color: white">选项</div>
+            <img alt="myhomepage_fans_header" src="/images-customer/myhomepage_fans_header.png" style="position:absolute;top:0;right:0;z-index:10;width: 100px;height: 100px">
+        </div>
+        <div class="win-content">
+            <section>
+                <div id="toggle1" data-win-control="WinJS.UI.ToggleSwitch" data-win-options="{checked:true, title:'是否在非WIFI下显示高质量图片'}"></div>
+            </section>
+            <section style="margin-top: 15px;">
+                <div id="toggle2" data-win-control="WinJS.UI.ToggleSwitch" data-win-options="{checked:true, title:'是否显示动态磁贴'}"></div>
+            </section>
+            <section style="margin-top: 15px;">
+                <div id="toggle3" data-win-control="WinJS.UI.ToggleSwitch" data-win-options="{checked:true, title:'如果存在，是否下载高品质音乐'}"></div>
+            </section>
+            <section style="margin-top: 15px;">
+                <span>下载文件路径</span>
+                <div>
+                    <input id="txtDownloadPath" type="text" disabled="disabled"/>
+                    <button id="btnSet">设置</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

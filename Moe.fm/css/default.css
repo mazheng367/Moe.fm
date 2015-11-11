@@ -1,0 +1,73 @@
+﻿#contenthost {
+	position:absolute;
+	bottom:165px;top:100px;left:0px;right:0px;
+}
+.fragment {
+    /* バナーと本体の行を含むグリッドを定義 */
+    display: -ms-grid;
+    height: 100%;
+    width: 91.22%;
+}
+
+    .fragment header[role=banner] {
+        /* 戻るボタンとページ タイトルの列を含むグリッドを定義します。*/
+        -ms-grid-columns: 37px 83px 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+    }
+
+        .fragment header[role=banner] .win-navigation-backbutton {
+            -ms-grid-column: 2;
+            margin-top: 57px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 3;
+            margin-top: 37px;
+        }
+
+            .fragment header[role=banner] .titlearea .pagetitle {
+                width: calc(100% - 20px);
+            }
+
+    .fragment section[role=main] {
+        -ms-grid-row: 2;
+        height: 100%;
+        width: 100%;
+    }
+
+
+#header{
+	background-color:#2a87f2;
+	background-image:url('/images-customer/header.png');
+	height:90px
+}
+.relative{position:relative}
+.wrap{margin-left:auto;margin-right:auto;}
+.section-logo{
+	margin-top:18px;
+	margin-left:46px;
+	width:400px;
+	float:left
+}
+#logo {
+    background: url("/images-customer/logo.png?v=20121110") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 50px;
+    line-height: 0;
+    width: 217px;
+    margin-left:20px
+}
+.c-back-button{float:left;margin-top:3px}
+.win-back{color:#FFFFFF;border-color:#FFFFFF}
+.win-backbutton:hover, .win-navigation-backbutton:hover .win-back {
+    background-color: #0C8EF6;
+    border-color: #FFFFFF
+}
+.body-bottom{position:absolute;bottom:0px;width:100%}
+
+.search-box{float:right;top:26px;right:20px;}
+.win-searchbox{width:180px}

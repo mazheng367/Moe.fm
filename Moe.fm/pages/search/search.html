@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>search</title>
+
+    <!-- WinJS 参照 -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="search.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+
+    <script src="/Scripts/moefm.consts.js"></script>
+    <script src="/Scripts/moefm.helper.js"></script>
+    <script src="/Scripts/moefm.javascript.extensions.js"></script>
+    <script src="search.js"></script>
+</head>
+<body>
+    <div class="search fragment framepage">
+        <div class="search-con">
+            <div id="oNoData" class="display-none" data-win-design-locked="true">找不到专辑或歌曲~ (￣▽￣)</div>
+			<div id="lsvTemplate" data-win-control="WinJS.Binding.Template">
+				<div class="search-item">
+					<img data-win-bind="src:wiki_cover.square;alt:wiki_title">
+				    <div class="title" data-win-bind="innerText:wiki_title;title:wiki_title"></div>
+                    <div class="intro" data-win-bind="innerText:wiki_intro;title:wiki_intro"></div>
+				</div>
+        	</div>
+            <div id="lsvSearchResult" data-win-control="WinJS.UI.ListView"
+                 data-win-options="{itemTemplate:select('#lsvTemplate'), selectionMode:'none'}"></div>
+        </div>
+		<progress id="pgSearchLoading" class="win-ring win-large load-progess display-none"></progress>
+    </div>
+</body>
+</html>

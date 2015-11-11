@@ -1,0 +1,83 @@
+﻿.col-back-button {border-color: white;color: white;}
+.col_flyout_header {
+    height: 58px;
+    background:#2a87f2 url('/images-customer/header.png')
+}
+.col-options{
+	background:#2a87f2 url('/images-customer/header.png');
+	padding-left:40px;
+	color:#C3C3C3;
+	position:absolute;
+	top:90px;right:0;left:0;
+}
+.col_current{color:#FFFFFF}
+.col-options span{margin-right:50px;}
+.col-options span:last-child{margin-right:0;}
+
+.col-content{
+	position:absolute;
+	top:125px;bottom:0;right:0;left:0;
+}
+
+.hideThis{display:none;}
+.con-empty{text-align: center; padding-top: 20px;height: 500px;}
+
+.collection-ring{
+	position:absolute;z-index:10;
+	left:calc(50% - 30px);
+	top:calc(50% - 30px);
+}
+
+/*ListView Styles*/
+.collection-listView{
+	position:absolute;
+	top:0;
+	bottom:0px;
+}
+
+/*ListView ItemTemplate Styles*/
+.collection-album-item{width:340px;}
+.collection-listView div.collection-album-item img{
+	float:left;width:96px;height:96px;
+}
+.collection-listView div.collection-album-item div.wiki_title{
+	float:left;margin-left:10px;width:220px;
+	height:66px;
+}
+.collection-listView div.collection-album-item div.wiki_coldate{
+	float:left;margin-left:10px;width:220px;
+	margin-top:10px;color:#aaa;
+}
+/*歌曲css*/
+
+.collection-listView-song{
+	position:absolute;
+	top:0;bottom:0px;
+}
+
+.collection-song-panel{
+	position:absolute;
+	bottom:40px;top:0;
+}
+.collection-sub-item{width:340px;overflow:hidden}
+.collection-listView-song div.collection-sub-item img{
+	float:left;width:60px;height:60px;
+}
+.collection-listView-song div.collection-sub-item div.wiki_title{
+	float:left;margin-left:10px;width:220px;
+	height:30px;
+}
+.collection-listView-song div.collection-sub-item div.wiki_coldate{
+	float:left;margin-left:10px;width:220px;
+	margin-top:10px;color:#aaa;
+}
+.collection-song-panel div.play-buttons{
+	overflow:hidden;padding:6px 0 0 6px;
+	cursor:pointer;
+}
+.collection-song-panel div.play-buttons img.ctrl-botton{
+	float:left;
+}
+.collection-song-panel div.play-buttons span.ctrl-tooltip{
+	float:left;margin-top:4px;font-size:16px;margin-left:6px;
+}

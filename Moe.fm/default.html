@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>Moe.fm</title>
+
+    <!-- WinJS 参照 -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <!-- Moe.fm 参照 -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+    <script src="/js/navigator.js"></script>
+    <script src="/Scripts/moefm.javascript.extensions.js"></script>
+    <script src="/Scripts/moefm.consts.js"></script>
+    <script src="Scripts/moefm.helper.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div>
+            <div>
+                <div class="wrap relative">
+                    <div class="relative section-logo">
+                        <button id="btnGoBack" data-win-control="WinJS.UI.BackButton" class="c-back-button"></button>
+                        <a title="萌否电台 2013新年" id="logo" style="cursor: pointer"></a>
+                    </div>
+					<div class="relative search-box">
+						<div id="searchBox" data-win-control="WinJS.UI.SearchBox" data-win-options="{ placeholderText : '搜索歌曲 (￣▽￣)'}"></div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>	
+	<div id="bottomPlayerContainer" class="body-bottom"></div>
+    <div id="appBar" data-win-control="WinJS.UI.AppBar">
+        <!--下载按钮-->
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{hidden:true, icon:'pause', id:'btn_app_dCtrl', label:'暂停', onclick:null, section:'global', type:'button'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{hidden:true, icon:'cancel', id:'btn_app_dCancel', label:'取消', onclick:null, section:'global', type:'button'}"></button>
+
+		<!--收藏和播放历史-->
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'musicinfo', id:'btn_app_myCollection', label:'我的收藏', onclick:null, section:'global', type:'button'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'audio', id:'btn_app_myplayList', label:'播放历史', onclick:null, section:'global', type:'button'}"></button>
+
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{hidden:true, icon:'filter', id:'btn_app_filter', label:'筛选', onclick:null, section:'global', type:'button'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'favorite', id:'btn_app_collect', label:'收藏专辑', onclick:null, section:'global', type:'button',hidden:true}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'download', id:'btn_app_download', label:'下载', onclick:Moefm.Download.downloadMusic, section:'global', type:'button'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'refresh', id:'btn_app_refresh', label:'刷新', onclick:null, section:'global', type:'button'}"></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿.framepage {
+    float:left;height:100%;width:100%;overflow-x:auto;overflow-y:hidden;position:relative;
+}
+.clearboth{clear:both}
+.moe-hidden{display: none}
+.text-overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

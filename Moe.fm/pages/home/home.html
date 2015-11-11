@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title></title>
+
+    <!-- WinJS 参照 -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/home/home.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+
+    <script src="/pages/home/home.js"></script>
+    <script src="/Scripts/moefm.helper.js"></script>
+    <script src="/Scripts/moefm.consts.js"></script>
+    <script src="/Scripts/moefm.javascript.extensions.js"></script>
+</head>
+<body>
+    <!-- 読み込まれて表示されるコンテンツです。 -->
+    <div class="homepage framepage">
+		<progress id="progHome" class="win-large"></progress>
+		<div id="musicTemplate" data-win-control="WinJS.Binding.Template">
+             <div class="browse-item">
+                 <div><img data-win-bind="src:wiki_cover.square" class="cover"></div>
+                 <div class="title" data-win-bind="innerText:wiki_title"></div>
+             </div>
+        </div>
+        <div class="song-container">
+			<div class="new-song">
+				<div class="header"><a id="btnNewMusic" href="javascript:;" style="cursor: pointer">新曲试听 &gt;</a></div>
+				<div class="clearboth"></div>
+				<div class="list-view">
+                    <div id="lsvNewMusic" data-win-control="WinJS.UI.ListView" data-win-options="{itemTemplate:select('#musicTemplate'), selectionMode:'none'}"></div>
+				</div>
+			</div>
+			<div class="new-song">
+				<div class="header"><a id="btnHotMusic" href="javascript:;" style="cursor: pointer">音乐热榜 &gt;</a></div>
+				<div class="clearboth"></div>
+				<div class="list-view">
+                    <div id="lsvHotMusic" data-win-control="WinJS.UI.ListView" data-win-options="{itemTemplate:select('#musicTemplate'), selectionMode:'none'}"></div>	
+				</div>
+			</div>
+			<div class="new-song">
+				<div class="header"><a id="btnHotRadio" href="javascript:;" style="cursor: pointer">流行电台 &gt;</a></div>
+				<div class="clearboth"></div>
+				<div class="list-view">
+                    <div id="lsvHotRadio" data-win-control="WinJS.UI.ListView" data-win-options="{itemTemplate:select('#musicTemplate'), selectionMode:'none'}"></div>	
+				</div>
+			</div>
+        </div>
+    </div>
+</body>
+</html>

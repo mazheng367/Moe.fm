@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>collection</title>
+    <link href="collection.css" rel="stylesheet" />
+    <script src="collection.js"></script>
+</head>
+<body>
+    <div id="flyoutCollection" aria-label="App Settings Flyout" data-win-control="WinJS.UI.SettingsFlyout" data-win-options="{settingsCommandId:'popupCollection'}">
+        <div class="win-header col_flyout_header" style="height: 58px;">
+            <button type="button" onclick="window.focus()" class="win-backbutton col-back-button"></button>
+            <div class="win-label" style="color: white">我的收藏</div>
+        </div>
+        <div class="col-options">
+            <span id="optionAlbum" class="win-label col_current">专辑</span>
+            <span id="optionSong" class="win-label">歌曲</span>
+            <span id="optionRadio" class="win-label">电台</span>
+        </div>
+        <div class="col-content">
+            <progress id="colRing" class="win-ring win-large collection-ring hideThis" style="color:#0C8EF6"></progress>
+            <div id="wikiTemplate" data-win-control="WinJS.Binding.Template">
+                <div class="collection-album-item">
+                    <img data-win-bind="src:obj.wiki_cover.small" />
+                    <div data-win-bind="innerText:obj.wiki_title" class="wiki_title"></div>
+                    <div data-win-bind="innerText:fav_date Moefm.Converter.timeConverter" class="wiki_coldate"></div>
+                </div>
+            </div>
+            <div id="subTemplate" data-win-control="WinJS.Binding.Template">
+                <div class="collection-sub-item">
+                    <img data-win-bind="src:obj.wiki.wiki_cover.small" />
+                    <div data-win-bind="innerText:obj.sub_title" class="wiki_title"></div>
+                    <div data-win-bind="innerText:fav_date Moefm.Converter.timeConverter" class="wiki_coldate"></div>
+                </div>
+            </div>
+            <div id="oNotLogin" class="hideThis" style="text-align: center; padding-top: 20px;">您还没有登录，请转到登录页面登录<br />Charm菜单 --> 设置 --> 账户 </div>
+            <div id="oAlbum" style="height:100%;">
+                <div class="con-empty hideThis">您还没有收藏专辑</div>
+                <div id="lsvCollectionAlbum" data-win-control="WinJS.UI.ListView" class="collection-listView"
+                     data-win-options="{itemTemplate:select('#wikiTemplate'), layout:{type:WinJS.UI.ListLayout}, selectionMode:'none'}"></div>
+            </div>
+            <div id="oSong" class="hideThis" style="height: 100%; opacity: 0;">
+                <div class="con-empty hideThis">您还没有收藏歌曲</div>
+				<div class="collection-song-panel">
+                    <div id="btnPlayBtns" class="play-buttons">
+                        <img class="ctrl-botton" src="/images-customer/play_all.png" />
+                        <span class="ctrl-tooltip">全部播放</span>
+                    </div>
+					<div id="lsvCollectionSong" data-win-control="WinJS.UI.ListView" class="collection-listView-song"
+						 data-win-options="{itemTemplate:select('#subTemplate'), layout:{type:WinJS.UI.ListLayout}, selectionMode:'none'}"></div>
+				</div>
+            </div>
+            <div id="oRadio" class="hideThis" style="height: 100%; opacity: 0;">
+                <div class="con-empty hideThis">您还没有收藏电台</div>
+                <div id="lsvCollectionRadio" data-win-control="WinJS.UI.ListView" class="collection-listView"
+                     data-win-options="{itemTemplate:select('#wikiTemplate'), layout:{type:WinJS.UI.ListLayout}, selectionMode:'none'}"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

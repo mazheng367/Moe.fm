@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>download</title>
+    <!-- WinJS 参照 -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="/css/layout.css" rel="stylesheet" />
+    <link href="download.css" rel="stylesheet" />
+
+    <script src="download.js"></script>
+</head>
+<body>
+    <div class="download fragment framepage">
+        <div id="lsvTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="search-item">
+                <img data-win-bind="src:wiki_cover.square;alt:wiki_title">
+                <div class="title" data-win-bind="innerText:wiki_title;title:wiki_title"></div>
+                <div class="intro"><progress value="0.4"></progress></div>
+                <div class="intro">正在下载&nbsp;-&nbsp;<span>60</span>%</div>
+            </div>
+        </div>
+        <div class="search-con">
+            <div id="oNoData" class="moe-hidden" style="margin-left: 52px">音乐全部下载完成~ (￣▽￣)</div>
+            <div id="lsvDownloads" data-win-control="WinJS.UI.ListView"></div>
+        </div>
+    </div>
+</body>
+</html>

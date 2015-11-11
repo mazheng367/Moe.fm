@@ -1,0 +1,52 @@
+﻿.detail {}
+
+.song-con{position:absolute;left:52px;top:20px;bottom:0px;right:0px}
+.song-con .caption{font-weight:bold;}
+.song-con .caption-panel{overflow:hidden;}
+.song-con .caption-panel div.play_button{
+	float:left;width:32px;height:32px;
+	margin-left:10px;cursor:pointer;
+	background-image:url('/images-customer/play_all.png');
+	background-repeat:no-repeat;
+}
+.song-con .caption-panel span.caption{
+	float:left;font-size:20px;font-weight:bold;
+	margin-top:2px;
+}
+
+.song-con .caption-panel span.tip{
+	float:left;margin-top:10px;
+}
+
+.album-detail{float:left;position:absolute;}
+.album-detail img{width:192px;height:192px}
+.album-intro{position:absolute;float:left;width:500px;left:192px;bottom:0px;top:0px}
+.album-intro .title{font-size:18px;margin-left:38px;font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow: ellipsis;}
+.album-intro .intro{margin-left:38px;margin-top:10px;height:calc(100% - 28px);}
+.album-intro .intro .content{
+	padding:0 20px 0 0;border:0;height:100%;margin-top:10px;
+	width:100%;overflow-y:auto;height:calc(100% - 88px);
+}
+.album-songs{float:left;position:absolute;left:692px;right:0px;top:0px;bottom:0px}
+.album-songs .songs-con{margin-left:40px;position:relative;height:100%}
+.album-songs .songs-con .songs-list{position:absolute;left:0;right:0px;bottom:0px;top:35px }
+
+/*
+ListView control.
+*/
+.win-listview {height: 100%;width:100%;}
+
+/*
+ 模板
+*/
+.template-con{position:relative;height:48px;width:100%}
+.template-con .item-cover{position:absolute;}
+.template-con .item-cover img{width:48px;height:48px}
+.template-con .item-intro{position:absolute;left:48px;right:0px;}
+.template-con .item-intro span{
+	width:100%;
+	display:inline-block;margin-left:10px;
+	overflow:hidden;white-space:nowrap;text-overflow: ellipsis;
+}
+.template-con .item-intro .item-title{font-size:16px;}
+.template-con .item-intro .item-artist{color:grey;font-size:12px;margin-top:4px}

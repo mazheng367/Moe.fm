@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>detail</title>
+
+    <!-- WinJS 参照 -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="detail.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+
+    <script src="/Scripts/moefm.javascript.extensions.js"></script>
+    <script src="/Scripts/moefm.consts.js"></script>
+    <script src="/Scripts/moefm.helper.js"></script>
+
+    <script src="detail.js"></script>
+</head>
+<body>
+    <div class="detail fragment framepage">
+        <div class="song-con">
+            <div class="album-detail"><img id="imgCover" src="http://moefou.90g.org/wiki_cover/000/04/06/000040607.jpg?v=1403447639"></div>
+            <div class="album-intro">
+                <div id="lblTitle" class="title"></div>
+                <div class="intro">
+                    <span>简&nbsp;&nbsp;&nbsp;介</span>
+					<textarea id="lblContent" class="content" readonly="readonly" spellcheck="false">暂无简介</textarea>
+                </div>
+            </div>
+            <div class="album-songs">
+                <div id="songItemTemplate" data-win-control="WinJS.Binding.Template">
+					<div class="template-con">
+						<div class="item-cover">
+							<img data-win-bind="src:cover.small" />
+						</div>
+						<div class="item-intro">
+                            <span class="item-title" data-win-bind="innerText:sub_title Moefm.Converter.htmlDecode"></span>
+                            <span class="item-artist" data-win-bind="innerText:artist Moefm.Converter.htmlDecode"></span>
+						</div>
+					</div>
+                </div>
+                <div class="songs-con">
+                    <div class="caption-panel">
+						<span class="caption">曲目列表</span>
+                        <div id="btnPlayAlbum" class="play_button"></div>
+                    <div class="songs-list">
+                        <div id="lsvSongs" data-win-control="WinJS.UI.ListView" data-win-options="{itemTemplate:select('#songItemTemplate'),selectionMode:'none'}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

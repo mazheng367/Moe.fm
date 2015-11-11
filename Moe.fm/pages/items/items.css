@@ -1,0 +1,41 @@
+﻿.items{}
+.search-con{position:absolute;left:0px;top:20px;bottom:0px;right:0px}
+
+.win-listview {height:100%;}
+
+
+.load-progess{position:absolute;left:50%;top:50%;}
+.load-progess:indeterminate{color:#0C8EF6}
+#lsvWikis .win-surface{margin-left:52px}
+.search-item{height:100px;width:300px;}
+.search-item img{float:left;width:90px;height:90px}
+.search-item div.title{
+	float:left;margin-left:10px;width:200px;
+	overflow:hidden;text-overflow:ellipsis;
+	white-space:nowrap;
+ }
+.search-item div.intro{
+	float:left;margin-left:10px;width:200px;margin-top:5px;
+	height:64px;color:grey;font-size:12px;
+	overflow:hidden;text-indent:2em;
+	background:url('/images-customer/quote_small.png') no-repeat;
+ }
+
+.win-back{color:#FFFFFF;border-color:#FFFFFF}
+.win-backbutton{color:#FFFFFF;border-color:#FFFFFF}
+.win-backbutton:hover, .win-navigation-backbutton:hover .win-back {
+    background-color: #0C8EF6;
+    border-color: #FFFFFF
+}
+
+#alphaFilter div,#monthFilter div{float:left;width:40px;margin-right:10px;text-align:center;margin-top:10px}
+
+#yearFilter div{float:left;width:60px;margin-right:10px;text-align:center;margin-top:10px}
+
+#alphaFilter div:hover,#monthFilter div:hover,#yearFilter div:hover{background-color:#0C8EF6;color:white}
+.item-selected{background-color:#0C8EF6;color:white}
+
+.col_flyout_header {
+    height: 58px;
+    background:#2a87f2 url('/images-customer/header.png')
+}

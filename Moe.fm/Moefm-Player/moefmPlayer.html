@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>moefmPlayer</title>
+
+    <!-- WinJS 参照 -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="moefmPlayer.css" rel="stylesheet" />
+    <script src="/Scripts/moefm.helper.js"></script>
+    <script src="moefmPlayer.js"></script>
+</head>
+<body>
+    <div class="moefmPlayer">
+        <div><audio id="oMusicPlayer" msaudiocategory="BackgroundCapableMedia" style="width: 0;height: 0"></audio></div>
+        <div class="player-header">
+            <div class="album-container">
+                <img id="__moe_imgCover__" class="cover" src="/images-customer/cover_medium.png" >	
+            </div>
+            <div class="container-left">
+                <div class="player-musicInfo">
+                    <div class="title-artist-con">
+                        <span id="__moe_lblTitle__" class="title"></span>
+                        <span class="separator">/</span>
+                        <span id="__moe_lblArtist__" class="artist"></span>
+                    </div>
+                    <div>
+                        <span class="album">
+                            <img src="/images-customer/media_album.png">
+                            <em id="__moe_lblAlbum__"></em>
+                        </span>
+                    </div>
+                </div>
+                <div id="__moe_progressPanel__" class="control-panel">
+                    <div id="__moe_bufferBar__" class="progress-buffer"></div>
+                    <div id="__moe_progress_bar__" class="progress-bar"></div>
+                </div>
+                <div class="control-item">
+					<div class="item-container">
+						<div id="__moe_btnLike__" class="item-button like"></div>
+                        <div id="__moe_btnPlay__" class="item-button play"></div>
+                        <div id="__moe_btnDelete__" class="delete" style="display: none"></div>
+                        <div id="__moe_btnNext__" class="item-button next"></div>
+						<div class="item-button volume">
+							<img src="/images-customer/media_volume.png"/>
+							<div id="__moe_volumePanel__" class="volume-panel">
+								<div class="max"></div>
+								<div class="bar"></div>
+							</div>
+						</div>
+						<div class="time-info"><span id="__moe_lblTimeInfo__">-00:00</span></div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

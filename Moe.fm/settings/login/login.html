@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>login</title>
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="login.css" rel="stylesheet" />
+    <script src="login.js"></script>
+</head>
+<body>
+    <div id="loginDiv" data-win-control="WinJS.UI.SettingsFlyout">
+        <div class="win-header" style="background-color:#0C8EF6">
+            <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton"></button>
+            <div class="win-label" style="color: white">账户</div>
+            <img alt="myhomepage_fans_header" src="/images-customer/myhomepage_fans_header.png" style="position:absolute;top:0;right:0;z-index:10;width: 100px;height: 100px">
+        </div>
+        <div class="win-content" style="width: 100%">
+            <section id="oLoginInfo" style="margin-top: 20px">
+                <div style="height: 90px">
+                    <img id="imgUserCover" style="width: 90px;height: 90px;float: left" />
+                    <div style="position:relative;height:90px;float: left;left: 20px">
+                        <label id="lblUserName"></label>
+                        <button id="btnLogout" type="button" style="position: absolute;bottom: 0;left: 0">注销</button>
+                    </div>
+                </div>
+            </section> 
+            <section id="oNoLogin">
+                <p>您还没有授权本APP，是否进行授权？</p>
+                <p>授权过程中不会记录您的账户信息</p>
+                <p><button id="btnLogin" type="button">授权</button></p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

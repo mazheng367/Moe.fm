@@ -1,0 +1,27 @@
+﻿.search  {
+}
+.search-con{position:absolute;left:0px;top:20px;bottom:0px;right:0px}
+
+.win-listview {
+	height:100%;
+}
+
+.display-none{display: none}
+.text-overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.load-progess{position:absolute;left:50%;top:50%;}
+.load-progess:indeterminate{color:#0C8EF6}
+#lsvSearchResult .win-surface{margin-left:52px}
+.search-item{height:100px;width:300px;}
+.search-item img{float:left;width:90px;height:90px}
+.search-item div.title{
+    float:left;margin-left:10px;width:200px;
+	overflow:hidden;text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+.search-item div.intro{
+	float:left;margin-left:10px;width:200px;margin-top:5px;
+	height:64px;color:grey;font-size:12px;
+	overflow:hidden;text-indent:2em;
+	background:url('/images-customer/quote_small.png') no-repeat;
+ }

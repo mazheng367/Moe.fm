@@ -1,0 +1,18 @@
+﻿.download{}
+.search-con{position:absolute;left:0px;top:20px;bottom:0px;right:0px}
+
+.win-listview {height:100%;}
+
+.load-progess{position:absolute;left:50%;top:50%;}
+.load-progess:indeterminate{color:#0C8EF6}
+#lsvDownloads .win-surface{margin-left:52px}
+.search-item{height:60px;width:300px;}
+.search-item img{float:left;width:60px;height:60px}
+.search-item div.title{
+	float:left;margin-left:10px;width:200px;
+	overflow:hidden;text-overflow:ellipsis;
+	white-space:nowrap;
+ }
+.search-item div.intro{
+	float:left;margin-left:10px;width:200px;
+ }
